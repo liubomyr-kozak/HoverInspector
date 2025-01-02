@@ -1,0 +1,198 @@
+baseURL = "https://liubomyr-kozak.github.io/hover-inspector/"
+languageCode = "en-us"
+title = "Hover Inspector"
+
+# Theme Config
+theme = "../.."
+
+# Enable syntax highlighting
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+# Enable emoji support
+enableEmoji = true
+
+# Enable Git info for lastmod
+enableGitInfo = true
+
+# Enable taxonomies
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+# Pagination
+paginate = 6
+paginatePath = "page"
+
+[params]
+  description = ""
+  author = "Liubomyr Kozak"
+  logo = "images/logo.svg"
+  # Google Analytics ID (e.g., "G-XXXXXXXXXX")
+  # googleAnalytics = "G-XXXXXXXXXX"
+  
+  # Global CTA Configuration
+  [params.cta]
+    enable = true
+    title = "Ready to Supercharge? Inspect, Explore, and Improve Any Website"
+    description = "Got ideas or noticed something to improve? Join my Slack channel. If you want, you can support the project, and I’ll keep making Inspector Tools even better for everyone!"
+    gradient_from = "#2563eb"  # Indigo-600
+    gradient_to = "#7c3aed"    # Purple-600
+    gradient_angle = 30
+    [params.cta.primary_button]
+      text = "Install Free Chrome Extension"
+      url = "https://chromewebstore.google.com/detail/hover-inspector-like-in-z/jbhnejndccdjigppalbbiphlbaaehpln"
+    [params.cta.secondary_button]
+      text = "View Demo"
+      url = "https://www.youtube.com/watch?v=d1195WBUa-s&ab_channel=Liubomyr_"
+    [params.cta.slack_button]
+      text = "Slack Channel"
+      url = "https://join.slack.com/t/browserextensionshq/shared_invite/zt-34o10eynr-Fof1vlJyx6PxpqjspCLKaw"
+
+  # Social Media Links
+  [params.social]
+    youtube = "https://www.youtube.com/watch?v=d1195WBUa-s&ab_channel=Liubomyr_"
+    github = "https://github.com/liubomyr-kozak/HoverInspector"
+  
+  # Footer Configuration
+  [params.footer]
+    #column_3_title = "LEGAL"
+
+  [params.header]
+    # Header background and border styles (optional)
+    background = "bg-white/80 backdrop-blur-sm"
+    border = "border-b border-gray-100"
+    hideButtons = true
+
+    # Logo configuration
+    [params.header.logo]
+      src = "images/logo.svg"
+    
+    # Menu configuration
+    [params.header.menu]
+      spacing = "space-x-8"
+      
+      # Dropdown menu configuration
+      [params.header.menu.dropdown]
+        width = "w-72"
+        container_padding = "py-6"
+        item_padding = "px-8 py-3"
+        background = "bg-white"
+        border = "border border-gray-100"
+        shadow = "shadow-xl"
+        radius = "rounded-lg"
+        text_color = "text-gray-700"
+        hover_background = "hover:bg-gray-50"
+        text_size = "text-sm"
+
+    # Button configuration
+    [params.header.buttons]
+      # Sign In button
+      [params.header.buttons.signIn]
+        text = "Sign in"
+        url = "/signin"
+      
+      # Get Started button
+      [params.header.buttons.getStarted]
+        text = "Get Started"
+        url = "/get-started"
+
+  # Blog configuration
+  [params.blog]
+    enable = true
+    title = "Latest Articles"
+    subtitle = " "
+    
+    # Blog CTA configuration
+    [params.blog.cta]
+      enable = true  # Enable/disable CTA in blog posts
+    
+    # Sidebar configuration
+    [params.blog.sidebar]
+      # Recent articles section
+      [params.blog.sidebar.recent]
+        enable = true
+        title = "Recent Articles"
+        count = 5
+      
+      # Categories section
+      [params.blog.sidebar.categories]
+        enable = true
+        title = "Categories"
+      
+      # Tags section
+      [params.blog.sidebar.tags]
+        enable = true
+        title = "Popular Tags"
+        count = 20
+
+      # Subscribe form section
+      [params.blog.sidebar.xsubscribe]
+        enable = true
+        title = "Subscribe to Newsletter"
+        description = "Get the latest posts delivered right to your inbox"
+        action = "https://formspree.io/f/your-form-id"
+        emailName = "email"
+        buttonText = "Subscribe"
+        placeholder = "Enter your email"
+        disclaimer = "We respect your privacy. Unsubscribe at any time."
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.80.0"
+
+[build]
+  writeStats = true
+
+[build.buildStats]
+  enable = true
+
+[security.funcs]
+  getenv = ['^HUGO_', '^CI$']
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = true
+    codeFences = true
+    guessSyntax = true
+    lineNumbersInTable = true
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+# Navigation Menu
+[menu]
+  [[menu.main]]
+    name = "Pricing"
+    url = "/pricing"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 3
+
+  #[[menu.main]]
+   # name = "About Us"
+   # url = "/about-us"
+   # weight = 4
+
+  # Footer Column 2 Menu
+  [[menu.footer_column_2]]
+    name = "Blog"
+    url = "/blog"
+    weight = 1
+  #[[menu.footer_column_2]]
+  #  name = "About Us"
+  #  url = "/about-us"
+  #  weight = 2
+
+  # Footer Column 3 Menu
+  [[menu.footer_column_3]]
+    name = "Privacy Policy"
+    url = "/privacy"
+    weight = 2
