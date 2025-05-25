@@ -44,14 +44,14 @@ paginatePath = "page"
       url = "https://chromewebstore.google.com/detail/hover-inspector-like-in-z/jbhnejndccdjigppalbbiphlbaaehpln"
     [params.cta.secondary_button]
       text = "View Demo"
-      url = "https://www.youtube.com/watch?v=d1195WBUa-s&ab_channel=Liubomyr_"
+      url = "https://youtu.be/ihT4tv98yXk"
     [params.cta.slack_button]
       text = "Slack Channel"
       url = "https://join.slack.com/t/browserextensionshq/shared_invite/zt-34o10eynr-Fof1vlJyx6PxpqjspCLKaw"
 
   # Social Media Links
   [params.social]
-    youtube = "https://www.youtube.com/watch?v=d1195WBUa-s&ab_channel=Liubomyr_"
+    youtube = "https://youtu.be/ihT4tv98yXk"
     github = "https://github.com/liubomyr-kozak/HoverInspector"
   
   # Footer Configuration

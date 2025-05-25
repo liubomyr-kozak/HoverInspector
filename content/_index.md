@@ -40,7 +40,7 @@ feedback:
     primary_button_text="Install Free Chrome Extension"
     primary_button_url="https://chromewebstore.google.com/detail/hover-inspector-like-in-z/jbhnejndccdjigppalbbiphlbaaehpln"
     secondary_button_text="View Demo"
-    secondary_button_url="https://www.youtube.com/watch?v=d1195WBUa-s&ab_channel=Liubomyr_"
+    secondary_button_url="https://youtu.be/ihT4tv98yXk"
     hero_image="images/home-image-1.png"
     gradient-from="#1874d26b"
     gradient-to="#1874d200"
