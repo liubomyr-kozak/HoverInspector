@@ -29,7 +29,7 @@ paginatePath = "page"
   author = "Liubomyr Kozak"
   logo = "images/logo.svg"
   # Google Analytics ID (e.g., "G-XXXXXXXXXX")
-  # googleAnalytics = "G-XXXXXXXXXX"
+  googleAnalytics = "G-GCBBFMQ2WH"
   
   # Global CTA Configuration
   [params.cta]
