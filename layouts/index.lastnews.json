@@ -1,0 +1,17 @@
+{{ $news := where .Site.RegularPages "Section" "blog" }}
+  {{ $values := slice }}
+  {{ range $news }}
+  {{ $values = $values | append (dict
+    "title" .Title
+    "date" (.Date.Format "2006-01-02")
+    "url" .RelPermalink
+  ) }}
+{{ end }}
+
+{{ $jsonStr := $values | jsonify }}
+{{ $hash := $jsonStr | sha1 }}
+
+{
+  "values": {{ $jsonStr }},
+  "lastUpdate": "{{ $hash }}"
+}

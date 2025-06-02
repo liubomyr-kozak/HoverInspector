@@ -1,0 +1,22 @@
+{{/* ТУТ ти хардкодиш значення для кожного поля */}}
+{{ $title := "Admin Notice" }}
+{{ $type := "info" }}
+{{ $content := "test user Notification" }}  {{/* ← ось тут можна ввести текст */}}
+
+{{/* Збираємо всі поля в один обʼєкт */}}
+{{ $values := dict "title" $title "type" $type "content" $content }}
+
+{{ $jsonStr := $values | jsonify }}
+
+{{ if $content }}
+{{ $hash := $jsonStr | sha1 }}
+{
+"values": {{ $jsonStr }},
+"lastUpdate": "{{ $hash }}"
+}
+{{ else }}
+{
+"values": {{ $jsonStr }},
+"lastUpdate": ""
+}
+{{ end }}

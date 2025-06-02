@@ -196,3 +196,19 @@ paginatePath = "page"
     name = "Privacy Policy"
     url = "/privacy"
     weight = 2
+
+[outputFormats]
+  [outputFormats.LASTNEWS]
+    mediaType = "application/json"
+    baseName = "last-news"
+    isPlainText = true
+    notAlternative = true
+
+  [outputFormats.ADMINNOTICE]
+    mediaType = "application/json"
+    baseName = "admin-notice"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "LASTNEWS", "ADMINNOTICE"]
